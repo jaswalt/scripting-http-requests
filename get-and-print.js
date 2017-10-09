@@ -2,11 +2,11 @@ var https = require('https');
 
 function getAndPrintHTML (options) {
 
-  https.get(requestOptions, function (response) {
-
-    let buffer = "";
+  https.get(options, function (response) {
 
     response.setEncoding('utf8');
+
+    let buffer = "";
 
     response.on('data', function (data) {
       buffer += data;
